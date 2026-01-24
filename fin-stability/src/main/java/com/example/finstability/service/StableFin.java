@@ -1,9 +1,14 @@
 package com.example.finstability.service;
+import com.example.finstability.model.SaveData;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Service
 public class StableFin {
+    static SaveData sdata;
 
     public static void main(String[] args) {
         System.out.println("Financial Stability Module has Awaken.\n");
@@ -37,10 +42,12 @@ public class StableFin {
         invest = new InvestmentPlan();
         long totalSaving=invest.beforeRetirementPlan(0.0, 10000,5000, r, time);
         double balance=totalSaving;
+
         retire=new RetirementPlan();
-        retire.retirementPlan(balance, 6  , 100,3 , time, 15);
-
-
+        List<String> data=new ArrayList<>();
+        data=retire.retirementPlan(balance, 6  , 100,3 , time, 15);
+        sdata=new SaveData(data,totalSaving);
+        System.out.println(data);
 
     }
 

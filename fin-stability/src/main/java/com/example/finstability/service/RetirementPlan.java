@@ -1,5 +1,6 @@
 package com.example.finstability.service;
 
+import com.example.finstability.model.SaveData;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -7,6 +8,7 @@ import java.util.List;
 
 @Service
 public class RetirementPlan {
+    static SaveData data;
     public static List<String> retirementPlan( double balance ,double interestRate,
                                        double currentMonthlyExpense ,double inflation ,
                                        double yearsUntilRetirement,
@@ -46,7 +48,8 @@ public class RetirementPlan {
             futureData.add("\nAmount will last only for : "+yearsLeft+"  years");
         }
         futureData.add("\n");
-        System.out.println(futureData);
+//        data.setFutureData(futureData);
+//        System.out.println(futureData);
         return futureData;
     }
 }
