@@ -35,8 +35,9 @@ public class RetirementPlan {
         if(monthly_Interest_On_Total_Saving>futureMonthlyExpense){
             for(int i=0;i<nextTargetYear;i++){
                 balance+=monthly_Interest_On_Total_Saving-futureMonthlyExpense;
-                futureData.add("\nAvailable balance and interest is enough to last :"+nextTargetYear+" years");
+//                futureData.add("\nAvailable balance and interest is enough to last :"+nextTargetYear+" years");
             }
+            System.out.println("Balance left/accumulated after - "+nextTargetYear+" years ");
         }
         else{
             System.out.println("Available amount not sustainable .");

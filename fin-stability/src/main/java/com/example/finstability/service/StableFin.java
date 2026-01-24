@@ -44,8 +44,7 @@ public class StableFin {
         double balance=totalSaving;
 
         retire=new RetirementPlan();
-        List<String> data=new ArrayList<>();
-        data=retire.retirementPlan(balance, 6  , 100,3 , time, 15);
+        List<String> data=retire.retirementPlan(balance, 6  , 100,3 , time, 15);
         sdata=new SaveData(data,totalSaving);
         System.out.println(data);
 
