@@ -40,7 +40,7 @@ public class StableFin {
         long totalSaving=invest.beforeRetirementPlan(0.0, 10000,5000, r, time);
         double balance=totalSaving;
         retire=new RetirementPlan();
-        retire.retirementPlan(balance, 6  , 15000,3 , time, 15);
+        retire.retirementPlan(balance, 6  , 100,3 , time, 15);
 
 
     }
