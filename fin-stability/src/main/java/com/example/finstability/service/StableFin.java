@@ -1,10 +1,8 @@
 package com.example.finstability.service;
+import org.springframework.stereotype.Service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.ArrayList;
-import java.util.List;
-
+@Service
 public class StableFin {
 
     public static void main(String[] args) {

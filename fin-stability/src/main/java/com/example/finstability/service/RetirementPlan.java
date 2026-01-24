@@ -1,10 +1,13 @@
 package com.example.finstability.service;
 
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class RetirementPlan {
-    public static void retirementPlan( double balance ,double interestRate,
+    public static List<String> retirementPlan( double balance ,double interestRate,
                                        double currentMonthlyExpense ,double inflation ,
                                        double yearsUntilRetirement,
                                        double nextTargetYear)
@@ -44,5 +47,6 @@ public class RetirementPlan {
         }
         futureData.add("\n");
         System.out.println(futureData);
+        return futureData;
     }
 }
