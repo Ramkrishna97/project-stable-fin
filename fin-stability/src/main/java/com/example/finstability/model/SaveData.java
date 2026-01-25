@@ -15,17 +15,17 @@ public class SaveData {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long id;
+    private int id;
     static List<String> futureData = new ArrayList<>();
     long balance_After_Investment;
     double initialBalance , monthlyInvest, investIncrement, yearlyInterestRate , yearsUntilRetirement;
     double finalBalance ,interestRate,currentMonthlyExpense ,inflation ,yearsUntilRetirement2,nextTargetYear;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
