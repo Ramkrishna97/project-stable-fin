@@ -1,20 +1,20 @@
 package com.example.finstability.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+//import jakarta.persistence.Entity;
+//import jakarta.persistence.GeneratedValue;
+//import jakarta.persistence.GenerationType;
+//import jakarta.persistence.Id;
 import tools.jackson.databind.annotation.JsonPOJOBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-@JsonPOJOBuilder
+//@Entity
+//@JsonPOJOBuilder
 public class SaveData {
 
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+//    @Id
+//    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     static List<String> futureData = new ArrayList<>();
     long balance_After_Investment;

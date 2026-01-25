@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class InvestmentPlan {
-    @Autowired
+//    @Autowired
     static SaveData data;
     public static long beforeRetirementPlan(double balance , double monthlyInvest,
                                             double investIncrement, double yearlyInterestRate ,
