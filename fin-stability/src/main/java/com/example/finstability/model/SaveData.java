@@ -7,7 +7,6 @@ import java.util.List;
 
 public class SaveData {
 
-//    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     static List<String> futureData = new ArrayList<>();
     long balance_After_Investment;
