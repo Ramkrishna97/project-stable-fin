@@ -7,7 +7,6 @@ import java.util.List;
 
 public class SaveData {
 
-//    @Id
 //    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     static List<String> futureData = new ArrayList<>();
