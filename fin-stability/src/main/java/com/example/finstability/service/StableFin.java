@@ -9,7 +9,6 @@ import java.util.List;
 
 @Service
 public class StableFin {
-    @Autowired
     static SaveData sdata;
 
     public static void main(String[] args) {
