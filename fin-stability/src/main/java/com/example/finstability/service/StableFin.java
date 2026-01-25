@@ -1,5 +1,6 @@
 package com.example.finstability.service;
 import com.example.finstability.model.SaveData;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -8,6 +9,7 @@ import java.util.List;
 
 @Service
 public class StableFin {
+    @Autowired
     static SaveData sdata;
 
     public static void main(String[] args) {

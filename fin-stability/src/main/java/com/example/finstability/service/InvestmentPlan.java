@@ -1,10 +1,12 @@
 package com.example.finstability.service;
 
 import com.example.finstability.model.SaveData;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class InvestmentPlan {
+    @Autowired
     static SaveData data;
     public static long beforeRetirementPlan(double balance , double monthlyInvest,
                                             double investIncrement, double yearlyInterestRate ,

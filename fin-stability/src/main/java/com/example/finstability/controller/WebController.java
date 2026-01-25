@@ -10,4 +10,7 @@ public class WebController {
     @Autowired
     public StableFin fin;
 
+    public void takeData(){
+
+    }
 }

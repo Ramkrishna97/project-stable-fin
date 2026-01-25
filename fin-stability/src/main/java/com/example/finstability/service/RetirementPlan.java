@@ -1,6 +1,7 @@
 package com.example.finstability.service;
 
 import com.example.finstability.model.SaveData;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ import java.util.List;
 
 @Service
 public class RetirementPlan {
-    static SaveData data;
+    @Autowired  static SaveData data;
     public static List<String> retirementPlan( double balance ,double interestRate,
                                        double currentMonthlyExpense ,double inflation ,
                                        double yearsUntilRetirement,
@@ -37,7 +38,7 @@ public class RetirementPlan {
                 balance+=monthly_Interest_On_Total_Saving-futureMonthlyExpense;
 //                futureData.add("\nAvailable balance and interest is enough to last :"+nextTargetYear+" years");
             }
-            System.out.println("Balance left/accumulated after - "+nextTargetYear+" years ");
+            System.out.println("Balance left/accumulated after - "+nextTargetYear+" years is: "+balance);
         }
         else{
             System.out.println("Available amount not sustainable .");

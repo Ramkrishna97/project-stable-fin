@@ -1,13 +1,121 @@
 package com.example.finstability.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import tools.jackson.databind.annotation.JsonPOJOBuilder;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@JsonPOJOBuilder
 public class SaveData {
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private Long id;
     static List<String> futureData = new ArrayList<>();
     long balance_After_Investment;
-//    double initialBalance , monthlyInvest, investIncrement, yearlyInterestRate , yearsUntilRetirement;
-//    double finalBalance ,interestRate,currentMonthlyExpense ,inflation ,yearsUntilRetirement2,nextTargetYear;
+    double initialBalance , monthlyInvest, investIncrement, yearlyInterestRate , yearsUntilRetirement;
+    double finalBalance ,interestRate,currentMonthlyExpense ,inflation ,yearsUntilRetirement2,nextTargetYear;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public double getInitialBalance() {
+        return initialBalance;
+    }
+
+    public void setInitialBalance(double initialBalance) {
+        this.initialBalance = initialBalance;
+    }
+
+    public double getMonthlyInvest() {
+        return monthlyInvest;
+    }
+
+    public void setMonthlyInvest(double monthlyInvest) {
+        this.monthlyInvest = monthlyInvest;
+    }
+
+    public double getInvestIncrement() {
+        return investIncrement;
+    }
+
+    public void setInvestIncrement(double investIncrement) {
+        this.investIncrement = investIncrement;
+    }
+
+    public double getYearlyInterestRate() {
+        return yearlyInterestRate;
+    }
+
+    public void setYearlyInterestRate(double yearlyInterestRate) {
+        this.yearlyInterestRate = yearlyInterestRate;
+    }
+
+    public double getYearsUntilRetirement() {
+        return yearsUntilRetirement;
+    }
+
+    public void setYearsUntilRetirement(double yearsUntilRetirement) {
+        this.yearsUntilRetirement = yearsUntilRetirement;
+    }
+
+    public double getFinalBalance() {
+        return finalBalance;
+    }
+
+    public void setFinalBalance(double finalBalance) {
+        this.finalBalance = finalBalance;
+    }
+
+    public double getInterestRate() {
+        return interestRate;
+    }
+
+    public void setInterestRate(double interestRate) {
+        this.interestRate = interestRate;
+    }
+
+    public double getCurrentMonthlyExpense() {
+        return currentMonthlyExpense;
+    }
+
+    public void setCurrentMonthlyExpense(double currentMonthlyExpense) {
+        this.currentMonthlyExpense = currentMonthlyExpense;
+    }
+
+    public double getInflation() {
+        return inflation;
+    }
+
+    public void setInflation(double inflation) {
+        this.inflation = inflation;
+    }
+
+    public double getYearsUntilRetirement2() {
+        return yearsUntilRetirement2;
+    }
+
+    public void setYearsUntilRetirement2(double yearsUntilRetirement2) {
+        this.yearsUntilRetirement2 = yearsUntilRetirement2;
+    }
+
+    public double getNextTargetYear() {
+        return nextTargetYear;
+    }
+
+    public void setNextTargetYear(double nextTargetYear) {
+        this.nextTargetYear = nextTargetYear;
+    }
 
     @Override
     public String toString() {
@@ -37,6 +145,25 @@ public class SaveData {
         futureData = futureData;
         this.balance_After_Investment = balance_After_Investment;
     }
+
+//    @Override
+//    public String toString() {
+//        return "SaveData{" +
+//                "id=" + id +
+//                ", balance_After_Investment=" + balance_After_Investment +
+//                ", initialBalance=" + initialBalance +
+//                ", monthlyInvest=" + monthlyInvest +
+//                ", investIncrement=" + investIncrement +
+//                ", yearlyInterestRate=" + yearlyInterestRate +
+//                ", yearsUntilRetirement=" + yearsUntilRetirement +
+//                ", finalBalance=" + finalBalance +
+//                ", interestRate=" + interestRate +
+//                ", currentMonthlyExpense=" + currentMonthlyExpense +
+//                ", inflation=" + inflation +
+//                ", yearsUntilRetirement2=" + yearsUntilRetirement2 +
+//                ", nextTargetYear=" + nextTargetYear +
+//                '}';
+//    }
 
     public SaveData() {
     }
