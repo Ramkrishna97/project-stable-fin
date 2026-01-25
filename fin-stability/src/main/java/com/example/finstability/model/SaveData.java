@@ -1,16 +1,10 @@
 package com.example.finstability.model;
 
 //import jakarta.persistence.Entity;
-//import jakarta.persistence.GeneratedValue;
-//import jakarta.persistence.GenerationType;
-//import jakarta.persistence.Id;
-import tools.jackson.databind.annotation.JsonPOJOBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
 
-//@Entity
-//@JsonPOJOBuilder
 public class SaveData {
 
 //    @Id
