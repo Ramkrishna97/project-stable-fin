@@ -11,7 +11,7 @@ class StableFin {
 //    static SaveData sdata;
 
     public static void main(String[] args) {
-        System.out.println("Financial Stability Module has Awaken.\n");
+        System.out.println("*_* Financial Stability Module has Awaken. 0-0 \n");
 
         /*
         i>.________before retirement_________
@@ -42,11 +42,11 @@ class StableFin {
         double time = retirementYear - currentYear;     //Total years of investment
 
         invest = new InvestmentPlan();
-        long totalSaving=invest.beforeRetirementPlan1(0.0, 10000,5000, r, time);
-        double balance=totalSaving;
+        long totalSaving=invest.beforeRetirementPlan1(0, 20000,5000, r, time);
+        long balance=totalSaving;
 
         retire=new RetirementPlan();
-        List<String> data=retire.retirementPlan(balance, 6  , 100,3 , time, 15);
+        List<String> data=retire.retirementPlan(balance, 5  , 185000,3 , time, 15);
 //        sdata=new SaveData(data,totalSaving);
         System.out.println(data);
 

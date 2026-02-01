@@ -1,7 +1,6 @@
 package com.example.finstability.service;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -29,7 +28,7 @@ public class InvestmentPlan {
 //    }
 
     public static long beforeRetirementPlan1(
-            double balance,
+            long balance,
             double monthlyInvest,
             double investIncrement,
             double yearlyInterestRate,
