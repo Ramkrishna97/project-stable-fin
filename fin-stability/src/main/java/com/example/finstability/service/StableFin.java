@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class StableFin {
-    static SaveData sdata;
+//    static SaveData sdata;
 
     public static void main(String[] args) {
         System.out.println("Financial Stability Module has Awaken.\n");
@@ -34,6 +34,7 @@ public class StableFin {
 
         InvestmentPlan invest;  // takes dat in format -
         // balance , monthlyInvest, investIncrement, yearlyInterestRate , yearsUntilRetirement
+
         RetirementPlan retire = new RetirementPlan();  //takes in format -
         // balance , interestRate, currentMonthlyExpense , inflation , yearsUntilRetirement, nextTargetYear
         double r=6.0; // interest rate per year , on investment
