@@ -6,27 +6,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SaveData {
+    double balance;
+    double monthlyInvest;
+    double investIncrement;
+    double yearlyInterestRate;
+    double yearsUntilRetirement;
 
-    private int id;
-    static List<String> futureData = new ArrayList<>();
-    long balance_After_Investment;
-    double initialBalance , monthlyInvest, investIncrement, yearlyInterestRate , yearsUntilRetirement;
-    double finalBalance ,interestRate,currentMonthlyExpense ,inflation ,yearsUntilRetirement2,nextTargetYear;
 
-    public int getId() {
-        return id;
+//    double balance ;
+    double interestRate;
+    double currentMonthlyExpense ;
+    double inflation;
+//    double yearsUntilRetirement;
+    double nextTargetYear;
+
+    public double getBalance() {
+        return balance;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public double getInitialBalance() {
-        return initialBalance;
-    }
-
-    public void setInitialBalance(double initialBalance) {
-        this.initialBalance = initialBalance;
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
     public double getMonthlyInvest() {
@@ -61,14 +60,6 @@ public class SaveData {
         this.yearsUntilRetirement = yearsUntilRetirement;
     }
 
-    public double getFinalBalance() {
-        return finalBalance;
-    }
-
-    public void setFinalBalance(double finalBalance) {
-        this.finalBalance = finalBalance;
-    }
-
     public double getInterestRate() {
         return interestRate;
     }
@@ -93,14 +84,6 @@ public class SaveData {
         this.inflation = inflation;
     }
 
-    public double getYearsUntilRetirement2() {
-        return yearsUntilRetirement2;
-    }
-
-    public void setYearsUntilRetirement2(double yearsUntilRetirement2) {
-        this.yearsUntilRetirement2 = yearsUntilRetirement2;
-    }
-
     public double getNextTargetYear() {
         return nextTargetYear;
     }
@@ -112,50 +95,17 @@ public class SaveData {
     @Override
     public String toString() {
         return "SaveData{" +
-                "FutureData=" + futureData +
-                ", balance_After_Investment=" + balance_After_Investment +
+                "balance=" + balance +
+                ", monthlyInvest=" + monthlyInvest +
+                ", investIncrement=" + investIncrement +
+                ", yearlyInterestRate=" + yearlyInterestRate +
+                ", yearsUntilRetirement=" + yearsUntilRetirement +
+                ", interestRate=" + interestRate +
+                ", currentMonthlyExpense=" + currentMonthlyExpense +
+                ", inflation=" + inflation +
+                ", nextTargetYear=" + nextTargetYear +
                 '}';
     }
-
-    public List<String> getFutureData() {
-        return futureData;
-    }
-
-    public void setFutureData(List<String> futureData) {
-        futureData = futureData;
-    }
-
-    public long getBalance_After_Investment() {
-        return balance_After_Investment;
-    }
-
-    public void setBalance_After_Investment(long balance_After_Investment) {
-        this.balance_After_Investment = balance_After_Investment;
-    }
-
-    public SaveData(List<String> futureData, long balance_After_Investment) {
-        futureData = futureData;
-        this.balance_After_Investment = balance_After_Investment;
-    }
-
-//    @Override
-//    public String toString() {
-//        return "SaveData{" +
-//                "id=" + id +
-//                ", balance_After_Investment=" + balance_After_Investment +
-//                ", initialBalance=" + initialBalance +
-//                ", monthlyInvest=" + monthlyInvest +
-//                ", investIncrement=" + investIncrement +
-//                ", yearlyInterestRate=" + yearlyInterestRate +
-//                ", yearsUntilRetirement=" + yearsUntilRetirement +
-//                ", finalBalance=" + finalBalance +
-//                ", interestRate=" + interestRate +
-//                ", currentMonthlyExpense=" + currentMonthlyExpense +
-//                ", inflation=" + inflation +
-//                ", yearsUntilRetirement2=" + yearsUntilRetirement2 +
-//                ", nextTargetYear=" + nextTargetYear +
-//                '}';
-//    }
 
     public SaveData() {
     }
