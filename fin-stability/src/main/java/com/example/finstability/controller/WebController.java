@@ -6,9 +6,6 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class WebController {
 
-//    @Autowired
-//    public StableFin fin;
-
     public void takeData(){
 
     }
