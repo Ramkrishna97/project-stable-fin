@@ -15,6 +15,7 @@ public class InvestmentPlan {
         double interest=0.0;
         long finalSaving=0L;
         balance+=monthlyInvest;
+
         for(int i=0;i<yearsUntilRetirement;i++){
             if(i%2==0){monthlyInvest+=investIncrement;}
             interest += balance* monthlyInterestRate*12;
@@ -26,7 +27,6 @@ public class InvestmentPlan {
 //        data.setBalance_After_Investment(finalSaving);
         return finalSaving;
     }
-
 
     public static long beforeRetirementPlan1(
             double balance,
