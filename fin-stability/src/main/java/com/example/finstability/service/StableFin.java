@@ -39,7 +39,7 @@ public class StableFin {
         // balance , interestRate, currentMonthlyExpense , inflation , yearsUntilRetirement, nextTargetYear
         double r=6.0; // interest rate per year , on investment
         double currentYear=2026, retirementYear=2046;
-        double time = retirementYear - currentYear;
+        double time = retirementYear - currentYear;     //Total years of investment
 
         invest = new InvestmentPlan();
         long totalSaving=retire.beforeRetirementPlan(0.0, 10000,5000, r, time);
