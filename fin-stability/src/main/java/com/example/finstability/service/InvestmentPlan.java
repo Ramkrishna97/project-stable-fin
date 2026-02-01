@@ -15,7 +15,6 @@ public class InvestmentPlan {
         double interest=0.0;
         long finalSaving=0L;
         balance+=monthlyInvest;
-
         for(int i=0;i<yearsUntilRetirement;i++){
             if(i%2==0){monthlyInvest+=investIncrement;}
             interest += balance* monthlyInterestRate*12;
