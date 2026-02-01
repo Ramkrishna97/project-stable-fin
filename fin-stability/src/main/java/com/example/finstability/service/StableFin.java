@@ -1,5 +1,4 @@
 package com.example.finstability.service;
-import com.example.finstability.model.SaveData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,7 +7,7 @@ import java.util.List;
 
 
 @Service
-public class StableFin {
+class StableFin {
 //    static SaveData sdata;
 
     public static void main(String[] args) {
@@ -32,17 +31,18 @@ public class StableFin {
          - what target investment will give desired result.
         */
 
-        InvestmentPlan invest;  // takes dat in format -
+        InvestmentPlan invest;  // takes data in format -
         // balance , monthlyInvest, investIncrement, yearlyInterestRate , yearsUntilRetirement
 
-        RetirementPlan retire = new RetirementPlan();  //takes in format -
+        RetirementPlan retire;  //takes data in format -
         // balance , interestRate, currentMonthlyExpense , inflation , yearsUntilRetirement, nextTargetYear
+
         double r=6.0; // interest rate per year , on investment
         double currentYear=2026, retirementYear=2046;
         double time = retirementYear - currentYear;     //Total years of investment
 
         invest = new InvestmentPlan();
-        long totalSaving=retire.beforeRetirementPlan(0.0, 10000,5000, r, time);
+        long totalSaving=invest.beforeRetirementPlan1(0.0, 10000,5000, r, time);
         double balance=totalSaving;
 
         retire=new RetirementPlan();
