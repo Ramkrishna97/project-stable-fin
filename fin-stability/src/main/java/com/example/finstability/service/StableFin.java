@@ -34,19 +34,19 @@ public class StableFin {
 
         InvestmentPlan invest;  // takes dat in format -
         // balance , monthlyInvest, investIncrement, yearlyInterestRate , yearsUntilRetirement
-        RetirementPlan retire;  //takes in format -
+        RetirementPlan retire = new RetirementPlan();  //takes in format -
         // balance , interestRate, currentMonthlyExpense , inflation , yearsUntilRetirement, nextTargetYear
         double r=6.0; // interest rate per year , on investment
         double currentYear=2026, retirementYear=2046;
         double time = retirementYear - currentYear;
 
         invest = new InvestmentPlan();
-        long totalSaving=invest.beforeRetirementPlan(0.0, 10000,5000, r, time);
+        long totalSaving=retire.beforeRetirementPlan(0.0, 10000,5000, r, time);
         double balance=totalSaving;
 
         retire=new RetirementPlan();
         List<String> data=retire.retirementPlan(balance, 6  , 100,3 , time, 15);
-        sdata=new SaveData(data,totalSaving);
+//        sdata=new SaveData(data,totalSaving);
         System.out.println(data);
 
     }
