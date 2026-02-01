@@ -1,7 +1,5 @@
 package com.example.finstability.service;
 
-import com.example.finstability.model.SaveData;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -9,11 +7,11 @@ import java.util.List;
 
 @Service
 public class RetirementPlan {
-    @Autowired  static SaveData data;
-    public static List<String> retirementPlan( double balance ,double interestRate,
-                                       double currentMonthlyExpense ,double inflation ,
-                                       double yearsUntilRetirement,
-                                       double nextTargetYear)
+//    @Autowired  static SaveData data;
+    public static List<String> retirementPlan(long balance , double interestRate,
+                                              double currentMonthlyExpense , double inflation ,
+                                              double yearsUntilRetirement,
+                                              double nextTargetYear)
     {
         /*
         -calculates required monthly expense by implying inflation to current monthly expense.

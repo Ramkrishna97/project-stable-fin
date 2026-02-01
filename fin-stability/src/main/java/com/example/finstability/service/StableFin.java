@@ -1,5 +1,4 @@
 package com.example.finstability.service;
-import com.example.finstability.model.SaveData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,12 +7,11 @@ import java.util.List;
 
 
 @Service
-public class StableFin {
-    @Autowired
-    static SaveData sdata;
+class StableFin {
+//    static SaveData sdata;
 
     public static void main(String[] args) {
-        System.out.println("Financial Stability Module has Awaken.\n");
+        System.out.println("*_* Financial Stability Module has Awaken. 0-0 \n");
 
         /*
         i>.________before retirement_________
@@ -33,21 +31,23 @@ public class StableFin {
          - what target investment will give desired result.
         */
 
-        InvestmentPlan invest;  // takes dat in format -
+        InvestmentPlan invest;  // takes data in format -
         // balance , monthlyInvest, investIncrement, yearlyInterestRate , yearsUntilRetirement
-        RetirementPlan retire;  //takes in format -
+
+        RetirementPlan retire;  //takes data in format -
         // balance , interestRate, currentMonthlyExpense , inflation , yearsUntilRetirement, nextTargetYear
+
         double r=6.0; // interest rate per year , on investment
         double currentYear=2026, retirementYear=2046;
-        double time = retirementYear - currentYear;
+        double time = retirementYear - currentYear;     //Total years of investment
 
         invest = new InvestmentPlan();
-        long totalSaving=invest.beforeRetirementPlan(0.0, 10000,5000, r, time);
-        double balance=totalSaving;
+        long totalSaving=invest.beforeRetirementPlan1(0, 20000,5000, r, time);
+        long balance=totalSaving;
 
         retire=new RetirementPlan();
-        List<String> data=retire.retirementPlan(balance, 6  , 100,3 , time, 15);
-        sdata=new SaveData(data,totalSaving);
+        List<String> data=retire.retirementPlan(balance, 5  , 185000,3 , time, 15);
+//        sdata=new SaveData(data,totalSaving);
         System.out.println(data);
 
     }
