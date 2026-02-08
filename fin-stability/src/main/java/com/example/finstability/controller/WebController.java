@@ -7,7 +7,9 @@ import org.springframework.stereotype.Controller;
 public class WebController {
 
     public void takeData(){
-        //takes data from web , save
+        //POST method that takes data from web , save
     }
-
+    public void showData(){
+        // GET method to show list of data
+    }
 }
