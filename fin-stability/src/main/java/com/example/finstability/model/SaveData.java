@@ -20,6 +20,7 @@ public class SaveData {
 ////    double yearsUntilRetirement;
 //    double nextTargetYear;
 
+    //only saves data as which ones are fixed, not variable
     List<String>InvestPlanData=new ArrayList<>();
     List<String> retirementPlanData=new ArrayList<>();
 
