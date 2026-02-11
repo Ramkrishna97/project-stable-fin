@@ -7,7 +7,6 @@ import java.util.List;
 
 @Service
 public class RetirementPlan {
-//    @Autowired  static SaveData data;
     public static List<String> retirementPlan(long balance , double interestRate,
                                               double currentMonthlyExpense , double inflation ,
                                               double yearsUntilRetirement,
