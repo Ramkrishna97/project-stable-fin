@@ -48,7 +48,6 @@ public class RetirementPlan {
             futureData.add("\nAmount will last only for : "+yearsLeft+"  years");
         }
         futureData.add("\n");
-//        System.out.println(futureData);
         return futureData;
     }
 }
