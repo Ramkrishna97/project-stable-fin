@@ -25,7 +25,6 @@ public class SaveData {
     List<String>InvestPlanData=new ArrayList<>();
     List<String> retirementPlanData=new ArrayList<>();
 
-
     public SaveData() {
     }
 }
