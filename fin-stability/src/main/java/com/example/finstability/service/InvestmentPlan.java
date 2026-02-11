@@ -45,6 +45,5 @@ public class InvestmentPlan {
         System.out.println("Total saving before retirement : " + finalSaving);
         return finalSaving;
     }
-
 }
 
