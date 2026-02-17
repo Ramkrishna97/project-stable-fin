@@ -15,5 +15,6 @@ public class WebController {
     @GetMapping("/getData")
     public void showData(){
         // GET method to show list of data
+        System.out.println("All Data shown ");
     }
 }
