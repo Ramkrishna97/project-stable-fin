@@ -10,6 +10,7 @@ public class WebController {
     @PostMapping("/save")
     public void takeData(){
         //POST method that takes data from web , save
+        System.out.println();
     }
     @GetMapping("/getData")
     public void showData(){
