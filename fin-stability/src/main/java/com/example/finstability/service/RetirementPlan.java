@@ -20,6 +20,7 @@ public class RetirementPlan {
         -otherwise, return that available amount not sustainable: calculate how long it will last
             - for this , withdraw monthly expense from interest , withdraw extra from balance.
         */
+
         List<String> futureData=new ArrayList<>();
         futureData.add("\nTotal Lump-sum balance saved till retirement: "+balance);
 
