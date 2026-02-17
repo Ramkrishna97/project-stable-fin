@@ -7,6 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FinStabilityApplication {
     public static void main(String[] args) {
         SpringApplication.run(FinStabilityApplication.class, args);
-    }
 
+    }
 }
