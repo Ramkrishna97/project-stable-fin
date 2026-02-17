@@ -27,5 +27,6 @@ public class SaveData {
     List<String> retirementPlanData=new ArrayList<>();
 
     public SaveData() {
+
     }
 }
