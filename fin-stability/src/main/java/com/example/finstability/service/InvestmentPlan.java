@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class InvestmentPlan {
+
 //    public com.example.finstability.model.SaveData data;
 //    public static long beforeRetirementPlan(double balance , double monthlyInvest,
 //                                            double investIncrement, double yearlyInterestRate ,
