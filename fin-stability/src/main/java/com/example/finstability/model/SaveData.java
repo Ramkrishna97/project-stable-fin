@@ -22,6 +22,7 @@ public class SaveData {
 
     //only saves data as which ones are fixed, not variable
     //can include users based data in future.
+
     List<String>InvestPlanData=new ArrayList<>();
     List<String> retirementPlanData=new ArrayList<>();
 
