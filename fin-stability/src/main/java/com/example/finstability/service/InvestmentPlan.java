@@ -26,7 +26,6 @@ public class InvestmentPlan {
 ////        data.setBalance_After_Investment(finalSaving);
 //        return finalSaving;
 //    }
-
     public static long beforeRetirementPlan1(
             long balance,
             double monthlyInvest,
