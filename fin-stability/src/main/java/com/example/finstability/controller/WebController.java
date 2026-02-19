@@ -12,6 +12,7 @@ public class WebController {
         //POST method that takes data from web , save
         System.out.println("Data saved Successfully");
     }
+
     @GetMapping("/getData")
     public void showData(){
         // GET method to show list of data
