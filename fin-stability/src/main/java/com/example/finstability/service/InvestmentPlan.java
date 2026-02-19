@@ -1,10 +1,10 @@
 package com.example.finstability.service;
 
-
 import org.springframework.stereotype.Service;
 
 @Service
 public class InvestmentPlan {
+
 //    public com.example.finstability.model.SaveData data;
 //    public static long beforeRetirementPlan(double balance , double monthlyInvest,
 //                                            double investIncrement, double yearlyInterestRate ,
@@ -26,7 +26,6 @@ public class InvestmentPlan {
 ////        data.setBalance_After_Investment(finalSaving);
 //        return finalSaving;
 //    }
-
     public static long beforeRetirementPlan1(
             long balance,
             double monthlyInvest,
@@ -45,6 +44,5 @@ public class InvestmentPlan {
         System.out.println("Total saving before retirement : " + finalSaving);
         return finalSaving;
     }
-
 }
 

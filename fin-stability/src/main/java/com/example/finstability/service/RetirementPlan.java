@@ -7,7 +7,6 @@ import java.util.List;
 
 @Service
 public class RetirementPlan {
-//    @Autowired  static SaveData data;
     public static List<String> retirementPlan(long balance , double interestRate,
                                               double currentMonthlyExpense , double inflation ,
                                               double yearsUntilRetirement,
@@ -21,6 +20,7 @@ public class RetirementPlan {
         -otherwise, return that available amount not sustainable: calculate how long it will last
             - for this , withdraw monthly expense from interest , withdraw extra from balance.
         */
+
         List<String> futureData=new ArrayList<>();
         futureData.add("\nTotal Lump-sum balance saved till retirement: "+balance);
 
@@ -48,8 +48,6 @@ public class RetirementPlan {
             futureData.add("\nAmount will last only for : "+yearsLeft+"  years");
         }
         futureData.add("\n");
-//        data.setFutureData(futureData);
-//        System.out.println(futureData);
         return futureData;
     }
 }
