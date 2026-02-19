@@ -24,7 +24,6 @@ public class SaveData {
     //can include users based data in future.
     List<String>InvestPlanData=new ArrayList<>();
     List<String> retirementPlanData=new ArrayList<>();
-
     public SaveData() {
 
     }
