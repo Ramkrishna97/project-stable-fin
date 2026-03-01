@@ -1,0 +1,5 @@
+--> Purpose : To calculate total investment for a time of employment( till retirement )
+-> Find monthly expenses considering inflation, so that matches same PPP as of present.
+-> Then it tries to find the monthly interest on saved amount, and if it's enough to sustain for next x(maybe 15-25y) years.
+
+
