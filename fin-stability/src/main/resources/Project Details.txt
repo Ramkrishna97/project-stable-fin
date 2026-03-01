@@ -3,3 +3,8 @@
 -> Then it tries to find the monthly interest on saved amount, and if it's enough to sustain for next x(maybe 15-25y) years.
 
 
+Future addition( possible features ):
+->Adding a suggestion on, how much to invest at present to match a particular expected amount in future expense.
+-> Adding UI console based platform.
+-> Use of Rest / API based data inputs.
+-> Use of DB , users based data.
