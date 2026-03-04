@@ -9,4 +9,3 @@ Future addition( possible features ):
 -> Use of Rest / API based data inputs.
 -> Use of DB , users based data.
 
-
