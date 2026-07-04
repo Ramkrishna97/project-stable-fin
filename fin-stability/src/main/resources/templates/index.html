@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Financial Stability Module</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 20px; }
+        h1 { color: #333; border-bottom: 2px solid #eee; padding-bottom: 10px;}
+        .form-group { margin-bottom: 15px; padding: 10px; border: 1px solid #ddd; border-radius: 5px;}
+        input[type="number"] { width: 90%; padding: 8px; margin-top: 5px; }
+        button { padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+        .result-box { margin-top: 30px; padding: 20px; border: 2px solid green; background-color: #e6ffe6;}
+    </style>
+</head>
+<body>
+<h1>Financial Stability Planner</h1>
+
+<!-- Calculation Form -->
+<div class="form-group">
+    <h2>Phase I Inputs (Before Retirement)</h2>
+    <form th:action="@{/calculate}" th:object="${parameters}" method="post">
+
+        <label>Current Balance ($):</label>
+        <input type="number" th:field="*{currentBalance}" required><br>
+
+        <label>Monthly Investment ($):</label>
+        <input type="number" th:field="*{monthlyInvest}" required><br>
+
+        <!-- ... Add more fields like investIncrement, yearsUntilRetirement -->
+
+        <button type="submit">Run Financial Simulation</button>
+    </form>
+</div>
+
+<!-- Results Display Area -->
+<div th:if="${result != null}" class="result-box">
+    <h2>Simulation Results</h2>
+    <p th:text="${result.toString()}"></p>
+
+    <h3>Detailed Summary</h3>
+    <ul>
+        <li>Future Monthly Expense (Adjusted): <span th:text="${#numbers.formatCurrency(result.futureMonthlyExpense)}"></span></li>
+        <li>Monthly Interest Income: <span th:text="${#numbers.formatCurrency(result.monthlyInterestIncome)}"></span></li>
+        <li th:if="${result.sustainabilityStatus.contains('Sustainable')}"><strong>✅ Status: Sustainable!</strong></li>
+        <li th:if="${result.sustainabilityStatus.contains('Not Sustainable')}"><strong>❌ Status: Not Sustainable.</strong></li>
+    </ul>
+</div>
+
+</body>
+</html>

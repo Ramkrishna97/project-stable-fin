@@ -118,9 +118,7 @@ public class StableFinModule {
         System.out.println(futureData);
     }
 
-
 }
-
 
 class New{
     public static void execute() {
