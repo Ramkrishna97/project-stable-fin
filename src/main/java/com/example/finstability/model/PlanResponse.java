@@ -10,7 +10,8 @@ public class PlanResponse {
     // --- at / after retirement ---
     private double futureMonthlyExpense;     // today's expense, inflated forward to retirement day
     private boolean sustainableIndefinitely; // true if interest always covered expenses in the projection
-    private double yearsFundsWillLast;       // years simulated (fractional) before the projection ended or money ran out
+    private boolean moneyDepleted;           // true only if the balance actually hit zero before the projection ended
+    private double yearsFundsWillLast;       // meaningful only when moneyDepleted is true - when the balance hit zero
     private double finalBalanceAfterProjection;
 
     public double getTotalInvestedPrincipal() { return totalInvestedPrincipal; }
@@ -24,6 +25,9 @@ public class PlanResponse {
 
     public boolean isSustainableIndefinitely() { return sustainableIndefinitely; }
     public void setSustainableIndefinitely(boolean v) { this.sustainableIndefinitely = v; }
+
+    public boolean isMoneyDepleted() { return moneyDepleted; }
+    public void setMoneyDepleted(boolean v) { this.moneyDepleted = v; }
 
     public double getYearsFundsWillLast() { return yearsFundsWillLast; }
     public void setYearsFundsWillLast(double v) { this.yearsFundsWillLast = v; }

@@ -17,6 +17,13 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class FinancialPlanningService {
+
+    /**
+     * Grows savings from now until retirement, month by month.
+     * Each month: add that month's contribution, then apply that month's
+     * interest on the new balance. Every 2 years (24 months), the monthly
+     * investment amount steps up by the configured increment.
+     */
     public PlanResponse calculateBeforeRetirement(PlanRequest input, PlanResponse response) {
         double balance = input.getStartingBalance();
         double monthlyInvestment = input.getMonthlyInvestment();
@@ -65,6 +72,7 @@ public class FinancialPlanningService {
         int totalMonths = (int) Math.round(input.getYearsToProject() * 12);
 
         boolean everRanShort = false;
+        boolean depleted = false;
         int monthsSimulated = 0;
 
         for (int month = 1; month <= totalMonths; month++) {
@@ -80,14 +88,19 @@ public class FinancialPlanningService {
             monthsSimulated = month;
             if (balance <= 0) {
                 balance = 0;
+                depleted = true; // the balance genuinely hit zero before the projection window ended
                 break;
             }
         }
+        // If the loop finishes without "depleted" being set, the balance survived the whole
+        // projection window - it may still have dipped into principal some months, but it
+        // did NOT run out. Reporting "runs out after N years" in that case would be wrong.
 
         response.setFutureMonthlyExpense(futureMonthlyExpense);
-        response.setYearsFundsWillLast(monthsSimulated / 12.0);
+        response.setMoneyDepleted(depleted);
+        response.setYearsFundsWillLast(depleted ? monthsSimulated / 12.0 : input.getYearsToProject());
         response.setFinalBalanceAfterProjection(balance);
-        response.setSustainableIndefinitely(!everRanShort && balance > 0);
+        response.setSustainableIndefinitely(!everRanShort);
         return response;
     }
 }

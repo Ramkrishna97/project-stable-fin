@@ -148,6 +148,7 @@
         }
         .verdict.good { background: var(--good-bg); color: var(--good-text); }
         .verdict.bad { background: var(--bad-bg); color: var(--bad-text); }
+        .verdict.warn { background: #fff4e0; color: #8a5a00; }
         .verdict strong { font-weight: 700; }
     </style>
 </head>
@@ -190,7 +191,7 @@
                 </div>
 
                 <div class="field">
-                    <label for="beforeRetirementInterestRate">Expected yearly return on investment(%)</label>
+                    <label for="beforeRetirementInterestRate">Expected yearly return (%)</label>
                     <input type="number" step="any" id="beforeRetirementInterestRate" th:field="*{beforeRetirementInterestRate}"/>
                     <small>Yearly growth rate on your invested money before retirement (compounds monthly).</small>
                 </div>
@@ -224,7 +225,7 @@
                 </div>
 
                 <div class="field">
-                    <label for="inflationRate">Expected average yearly inflation (%)</label>
+                    <label for="inflationRate">Expected yearly inflation (%)</label>
                     <input type="number" step="any" id="inflationRate" th:field="*{inflationRate}"/>
                     <small>Used to project today's expenses to what they'll cost on retirement day.</small>
                 </div>
@@ -266,10 +267,16 @@
             <strong>Good news —</strong> interest on your balance covers your expenses every month in this
             projection, so the extra interest gets reinvested and your balance keeps growing instead of shrinking.
         </div>
-        <div class="verdict bad" th:unless="${response.sustainableIndefinitely}">
+        <div class="verdict bad" th:if="${!response.sustainableIndefinitely and response.moneyDepleted}">
             <strong>Heads up —</strong> in at least one month your expenses were more than the interest you earned,
-            so money had to be withdrawn from the balance itself. Based on the simulation, your savings run out
+            so money had to be withdrawn from the balance itself. Your savings run out completely
             after <strong th:text="${#numbers.formatDecimal(response.yearsFundsWillLast, 1, 1, 'POINT')}"></strong> years.
+        </div>
+        <div class="verdict warn" th:if="${!response.sustainableIndefinitely and !response.moneyDepleted}">
+            <strong>Worth watching —</strong> in at least one month your expenses were more than the interest you
+            earned, so some months dipped into the balance itself. Even so, you still have money left at the end
+            of the <strong th:text="${#numbers.formatDecimal(response.yearsFundsWillLast, 1, 1, 'POINT')}"></strong>-year
+            check — try a longer "years to check" to see whether it would eventually run out.
         </div>
 
         <div class="cards">
