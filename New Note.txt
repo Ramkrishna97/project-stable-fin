@@ -13,3 +13,40 @@
         if, saved balance doesn't meet expectation , suggest what to do-
          - need to increase investment ?
          - what target investment will give desired result.
+
+
+
+Steps :
+
+                                        model attribute :
+current monthly expenses,
+
+current investment ,
+current savings lumpsum ,
+duration of investment(/ till retirement age ),
+inflation rate,
+bank interest on investment ,
+
+-*- total saved at time of retirement
+
+future expected expenses ( = current expenses *+ inflation ),
+
+
+
+                                       service functions :
+
+count investment :
+
+process inflation & expenses :
+
+process after retirement :
+
+
+
+
+
+
+
+
+
+

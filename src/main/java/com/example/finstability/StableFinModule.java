@@ -8,24 +8,6 @@ public class StableFinModule {
     public static void main(String[] args) {
         System.out.println("Financial Stability Module has Awaken.\n");
 
-        /*
-        i>.________before retirement_________
-        invest monthly / yearly ;
-        apply interest monthly / yearly ;
-        count balance till retirement.
-        increment in invest occur after sometime.
-
-        ii>._______at retirement__________
-        balance fixed;
-        monthly / yearly withdraw started;
-        yearly/monthly interest adds ;      if interest is more that withdraw, re-invest it.
-
-        iii>._______give suggestion________
-        if, saved balance doesn't meet expectation , suggest what to do-
-         - need to increate investment ?
-         - what target investment will give desired result.
-        */
-
         //    double r=6.0; // interest rate per year , on investment
         //    double currentYear=2026, retirementYear=2056;
         //    double time = 10
@@ -41,21 +23,21 @@ public class StableFinModule {
 
 
     }
-    // public static long beforeRetirementPlan(double balance , double monthlyInvest,double investIncrement, double yearlyInterestRate ,double yearsUntilRetirement){
-    //     double monthlyInterestRate=yearlyInterestRate/1200;
-    //     double interest=0.0;
-    //     long finalSaving=0L;
-    //     balance+=monthlyInvest;
-    //     for(int i=0;i<yearsUntilRetirement;i++){
-    //         if(i%2==0){monthlyInvest+=investIncrement;}
-    //     interest += balance* monthlyInterestRate*12;
-    //     balance+=monthlyInvest;
-    //     }
-    //     System.out.println("balance after invest : "+balance+"\ninterest after invest: "+interest);
-    //     finalSaving+=balance+interest;
-    //     System.out.println("Total saving before retirement : "+finalSaving);
-    //     return finalSaving;
-    // }
+//     public static long beforeRetirementPlan(double balance , double monthlyInvest,double investIncrement, double yearlyInterestRate ,double yearsUntilRetirement){
+//         double monthlyInterestRate=yearlyInterestRate/1200;
+//         double interest=0.0;
+//         long finalSaving=0L;
+//         balance+=monthlyInvest;
+//         for(int i=0;i<yearsUntilRetirement;i++){
+//             if(i%2==0){monthlyInvest+=investIncrement;}
+//         interest += balance* monthlyInterestRate*12;
+//         balance+=monthlyInvest;
+//         }
+//         System.out.println("balance after invest : "+balance+"\ninterest after invest: "+interest);
+//         finalSaving+=balance+interest;
+//         System.out.println("Total saving before retirement : "+finalSaving);
+//         return finalSaving;
+//     }
 
     public static long beforeRetirementPlan(
             double balance,
