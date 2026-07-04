@@ -24,18 +24,22 @@ public class FinanceController {
     }
 
     // POST mapping to process calculations from the form submission
+
     @PostMapping("/calculate")
     public String calculateFinances(@ModelAttribute FinancialParameters parameters, Model model) {
+        // Basic check to ensure critical data is present before computation
+        if (parameters.getCurrentBalance() < 0 || parameters.getYearsUntilRetirement() <= 0) {
+            model.addAttribute("error", "Please enter valid positive values for balance and years.");
+            return "index"; // Return the form with an error message
+        }
 
-        // Step 1: Calculate Savings Before Retirement (Phase I)
+        // ... existing logic remains the same
         long finalSaving = financeService.calculateSaving(parameters);
-        System.out.println("Calculated Saving: " + finalSaving);
-
-        // Step 2: Simulate Retirement (Phase II & III)
         RetirementResult result = financeService.simulateRetirement(parameters, finalSaving);
 
         model.addAttribute("parameters", parameters);
         model.addAttribute("result", result);
-        return "index"; // Reuse the same template to display results
+        return "index";
     }
+
 }

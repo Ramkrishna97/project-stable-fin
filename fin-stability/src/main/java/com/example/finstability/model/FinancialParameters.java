@@ -18,7 +18,7 @@ public class FinancialParameters {
     private int yearsUntilRetirement = 60 -  Year.now().getValue();  // Default
 
     // Retirement specific fields (can be expanded)
-    private double currentMonthlyExpense = 25000 / 12; // Example conversion for input simplicity
+    private double currentMonthlyExpense = 180000 / 12; // Example conversion for input simplicity
     private double inflationRate = 4.0;     // average rate of yearly inflation in India
     private int retirementDurationYears = 25;   // expected years to last after retirement : till age of 85
 
