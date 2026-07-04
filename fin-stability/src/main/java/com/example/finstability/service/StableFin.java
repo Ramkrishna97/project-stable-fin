@@ -13,24 +13,6 @@ class StableFin {
     public static void main(String[] args) {
         System.out.println("*_* Financial Stability Module has Awaken. 0-0 \n");
 
-        /*
-        i>.________before retirement_________
-        invest monthly / yearly ;
-        apply interest monthly / yearly ;
-        count balance till retirement.
-        increment in invest occur after sometime.
-
-        ii>._______at retirement__________
-        balance fixed;
-        monthly / yearly withdraw started;
-        yearly/monthly interest adds ;      if interest is more that withdraw, re-invest it.
-
-        iii>._______give suggestion________
-        if, saved balance doesn't meet expectation , suggest what to do-
-         - need to increate investment ?
-         - what target investment will give desired result.
-        */
-
         InvestmentPlan invest;  // takes data in format -
         // balance , monthlyInvest, investIncrement, yearlyInterestRate , yearsUntilRetirement
 
